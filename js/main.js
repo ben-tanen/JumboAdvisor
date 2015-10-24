@@ -39,7 +39,7 @@ $(function() {
     var degree_list  = null;
     var degree_sheet = null;
     var course_list  = null;
-    
+
     $.ajax({
         url: "http://130.64.193.20:3000/getDegreeList",
     }).done(function(data) {
@@ -98,7 +98,8 @@ $(function() {
                         course_list = data;
 
                         $( ".class-input-field" ).autocomplete({
-                            source: data
+                            source: data,
+                            minLength: 1
                         });
                     });
                 });
