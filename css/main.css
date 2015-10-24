@@ -1,0 +1,45 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.sect-reqs {
+    width: 300px;
+    border-radius: 10px 10px 0 0;
+    border: 1px solid black;
+    overflow: hidden;
+    margin: 10px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.sect-header {
+    padding: 5px;
+    background-color: #B5B7B1;
+}
+
+.validation-check {
+    width: 20px;
+    height: 20px;
+    background-color: blue;
+    display: inline-block;
+    position: absolute;
+    right: 15px;
+    top: 5px;
+}
+
+/*
+.class-input {
+    display: inline-block;
+    width: 80px;
+    height: 15px;
+    border: 1px solid gray;
+}
+*/
+
+.req-single, .req-input {
+    position: relative;
+    width: 300px;
+    padding: 5px 5px 5px 5px;
+    border-top: 1px solid black;
+}

@@ -1,0 +1,241 @@
+[{
+	"name": "Astrophysics",
+	"id": 2,
+	"sect_reqs": 
+		[{"name": "Major Requirements", 
+  		   "req_list": [
+  		   		{"name": "Astronomy Elective",
+  		   		 "description": "Must be more advanced than AST 10",
+  		   	 	 "valid_set": [["range", "AST", 11, 400]]
+  			 	},
+  			 	{"name": "Astronomy Elective",
+  		   		 "description": "Must be more advanced than AST 10",
+  		   	 	 "valid_set": [["range", "AST", 11, 400]]
+  			 	},
+  			 	{"name": "Astronomy Elective",
+  		   		 "description": "Must be more advanced than AST 10",
+  		   	 	 "valid_set": [["range", "AST", 11, 400]]
+  			 	},
+  			 	{"name": "Astronomy Elective",
+  		   		 "description": "Must be more advanced than AST 10",
+  		   	 	 "valid_set": [["range", "AST", 11, 400]]
+  			 	},
+  			 	{"name": "Math Elective",
+  			     "description": "Must be more advanced than MATH 44",
+  			     "valid_set": [["range", "MATH", 45, 400]]
+  			    },
+  			    {"name": "Math Elective",
+  			     "description": "Must be more advanced than MATH 44",
+  			     "valid_set": [["range", "MATH", 45, 400]]
+  			    },
+  			    {"name": "Physics 13",
+  			     "description": "Or equivalent lab experience",
+  			     "valid_set": [["is", "PHY", 13]]
+  			    },
+  			    {"name": "Physics 64",
+  			     "description": "Or equivalent lab experience",
+  			     "valid_set": [["is", "PHY", 64]]
+  			    },
+  			    {"name": "Physics Elective",
+  			     "description": "Must be more advanced than PHY 12",
+  			     "valid_set": [["range", "PHY", 13, 400]]
+  			    },
+  			    {"name": "Physics Elective",
+  			     "description": "Must be more advanced than PHY 12",
+  			     "valid_set": [["range", "MATH", 13, 400]]
+  			    }]
+		},
+		{"name": "Writing Requirement",
+			"req_list": [
+			   {"name": "English 1 or 3",
+			    "description": "Or prematriculation credit",
+			    "valid_set": [["is", "ENG", 1],["is", "ENG", 3]]
+			   },
+			   {"name": "English 2 or 4 or Philosophy 1",
+				"description": "Or A/A- in ENG 1/3 or prematriculation credit",
+				"valid_set": [["is", "ENG", 2], ["is", "ENG", 4], ["is", "PHIL", 1]]
+			   }
+		    ]
+		},
+		{"name": "Foreign Language Requirement",
+			"req_list": [
+			   {"name": "First Semester Language",
+			    "description": "First semester language course",
+			    "valid_set": [["is", "CHNS", 1],
+			    			  ["is", "FR", 1],
+			    			  ["is", "GER", 1],
+			    			  ["is", "HEB", 1],
+			    			  ["is", "GRK", 1],
+			    			  ["is", "ITAL", 1],
+			    			  ["is", "JPN", 1],
+			    			  ["is", "LAT", 1],
+			    			  ["is", "POR", 1],
+			    			  ["is", "RUS", 1],
+			    			  ["is", "SPN", 1],
+			    			  ["is", "SWA", 1]]
+			    },
+			    {"name": "Second Semester Language",
+			    "description": "Must be in same language as first semester language course",
+			    "valid_set": [["is", "CHNS", 2],
+			    			  ["is", "FR", 2],
+			    			  ["is", "GER", 2],
+			    			  ["is", "HEB", 2],
+			    			  ["is", "GRK", 2],
+			    			  ["is", "ITAL", 2],
+			    			  ["is", "JPN", 2],
+			    			  ["is", "LAT", 2],
+			    			  ["is", "POR", 2],
+			    			  ["is", "RUS", 2],
+			    			  ["is", "SPN", 2],
+			    			  ["is", "SWA", 2]]
+			    },
+			    {"name": "Third Semester Language",
+			    "description": "Must be in same language as first and second semester language courses",
+			    "valid_set": [["is", "CHNS", 3],
+			    			  ["is", "FR", 3],
+			    			  ["is", "GER", 3],
+			    			  ["is", "HEB", 3],
+			    			  ["is", "GRK", 3],
+			    			  ["is", "ITAL", 3],
+			    			  ["is", "JPN", 3],
+			    			  ["is", "LAT", 3],
+			    			  ["is", "POR", 3],
+			    			  ["is", "RUS", 3],
+			    			  ["is", "SPN", 3],
+			    			  ["is", "SWA", 3]]
+			    }
+			    {"name": "Fourth Semester Language or Culture",
+			    "description": "Choose language or culture in any department",
+			    "valid_set": [["range", "CHNS", 1, 400],
+			    			  ["range", "FR", 1, 400],
+			    			  ["range", "GER", 1, 400],
+			    			  ["range", "HEB", 1, 400],
+			    			  ["range", "GRK", 1, 400],
+			    			  ["range", "ITAL", 1, 400],
+			    			  ["range", "JPN", 1, 400],
+			    			  ["range", "LAT", 1, 400],
+			    			  ["range", "POR", 1, 400],
+			    			  ["range", "RUS", 1, 400],
+			    			  ["range", "SPN", 1, 400],
+			    			  ["range", "SWA", 1, 400]]
+			    },
+			    {"name": "Fifth Semester Language or Culture",
+			    "description": "Choose language or culture in same language/culture as fourth semester course",
+			    "valid_set": [["range", "CHNS", 2, 400],
+			    			  ["range", "FR", 2, 400],
+			    			  ["range", "GER", 2, 400],
+			    			  ["range", "HEB", 2, 400],
+			    			  ["range", "GRK", 2, 400],
+			    			  ["range", "ITAL", 2, 400],
+			    			  ["range", "JPN", 2, 400],
+			    			  ["range", "LAT", 2, 400],
+			    			  ["range", "POR", 2, 400],
+			    			  ["range", "RUS", 2, 400],
+			    			  ["range", "SPN", 2, 400],
+			    			  ["range", "SWA", 2, 400]]
+			    },
+			    {"name": "Sixth Semester Language or Culture",
+			    "description": "Choose language or culture in same language/culture as fourth/fifth semester courses",
+			    "valid_set": [["range", "CHNS", 3, 400],
+			    			  ["range", "FR", 3, 400],
+			    			  ["range", "GER", 3, 400],
+			    			  ["range", "HEB", 3, 400],
+			    			  ["range", "GRK", 3, 400],
+			    			  ["range", "ITAL", 3, 400],
+			    			  ["range", "JPN", 3, 400],
+			    			  ["range", "LAT", 3, 400],
+			    			  ["range", "POR", 3, 400],
+			    			  ["range", "RUS", 3, 400],
+			    			  ["range", "SPN", 3, 400],
+			    			  ["range", "SWA", 3, 400]]
+			    }]
+		},
+		{"name": "World Civilization Requirement",
+		    "req_list": [
+			   {"name": "World Civilization course",
+			    "description": "Course with World Civilization Requirement attribute",
+			    "valid_set": [["attr", "World Civilization Requirement"]]
+			   }
+			]
+		},
+		{"name": "Humanities Requirement",
+		    "req_list": [
+			   {"name": "Humanities course",
+			    "description": "Course with LA-Distribution-Humanities attribute or one prematriculation credit. No more than 2 of the distribution classes may be from a single department.",
+			    "valid_set": [["attr", "LA-Distribution-Humanities"]]
+			   }
+			]
+		},
+		{"name": "Humanities Requirement",
+		    "req_list": [
+			   {"name": "Humanities course",
+			    "description": "Course with LA-Distribution-Humanities attribute or one prematriculation credit. No more than 2 of the distribution classes may be from a single department.",
+			    "valid_set": [["attr", "LA-Distribution-Humanities"]]
+			   }
+			]
+		},
+		{"name": "Arts Requirement",
+		    "req_list": [
+			   {"name": "Arts course",
+			    "description": "Course with LA-Distribution-Arts attribute or one prematriculation credit. No more than 2 of the distribution classes may be from a single department.",
+			    "valid_set": [["attr", "LA-Distribution-Arts"]]
+			   }
+			]
+		},
+		{"name": "Arts Requirement",
+		    "req_list": [
+			   {"name": "Arts course",
+			    "description": "Course with LA-Distribution-Arts attribute or one prematriculation credit. No more than 2 of the distribution classes may be from a single department.",
+			    "valid_set": [["attr", "LA-Distribution-Arts"]]
+			   }
+			]
+		},
+		{"name": "Social Sciences Requirement",
+		    "req_list": [
+			   {"name": "Social Sciences course",
+			    "description": "Course with LA-Distribution-Social Sciences attribute or one prematriculation credit. No more than 2 of the distribution classes may be from a single department.",
+			    "valid_set": [["attr", "LA-Distribution-Social Sciences"]]
+			   }
+			]
+		},
+		{"name": "Social Sciences Requirement",
+		    "req_list": [
+			   {"name": "Social Sciences course",
+			    "description": "Course with LA-Distribution-Social Sciences attribute or one prematriculation credit. No more than 2 of the distribution classes may be from a single department.",
+			    "valid_set": [["attr", "LA-Distribution-Social Sciences"]]
+			   }
+			]
+		},
+		{"name": "Natural Sciences Requirement",
+		    "req_list": [
+			   {"name": "Natural Sciences course",
+			    "description": "Course with LA-Distribution-Natural Sciences attribute or one prematriculation credit. No more than 2 of the distribution classes may be from a single department.",
+			    "valid_set": [["attr", "LA-Distribution-Natural Sciences"]]
+			   }
+			]
+		},
+		{"name": "Natural Sciences Requirement",
+		    "req_list": [
+			   {"name": "Natural Sciences course",
+			    "description": "Course with LA-Distribution-Natural Sciences attribute or one prematriculation credit. No more than 2 of the distribution classes may be from a single department.",
+			    "valid_set": [["attr", "LA-Distribution-Natural Sciences"]]
+			   }
+			]
+		},
+		{"name": "Mathematical Sciences Requirement",
+		    "req_list": [
+			   {"name": "Mathematical Sciences course",
+			    "description": "Course with LA-Distribution-Mathematics attribute or one prematriculation credit. No more than 2 of the distribution classes may be from a single department.",
+			    "valid_set": [["attr", "LA-Distribution-Mathematics"]]
+			   }
+			]
+		},
+		{"name": "Mathematical Sciences Requirement",
+		    "req_list": [
+			   {"name": "Mathematical Sciences course",
+			    "description": "Course with LA-Distribution-Mathematics attribute or one prematriculation credit. No more than 2 of the distribution classes may be from a single department.",
+			    "valid_set": [["attr", "LA-Distribution-Mathematics"]]
+			   }
+			]
+		}]
+}]
