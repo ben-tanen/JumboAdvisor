@@ -15,13 +15,15 @@ function generate_new_degree_section(section) {
 
 function isCourse(dept, course_num) {
     return (function (course) {
-        return (dept == course.split('-')[0] && course_num == parseInt(course.split('-')[1]))
+        var separator = (course.indexOf('-') >= 0? '-' : ' ');
+        return (dept.toLowerCase() == course.split(separator)[0].toLowerCase() && course_num == parseInt(course.split(separator)[1]))
     });
 }
 
 function isCourseInRange(dept, min, max) {
     return (function (course) {
-        return (dept == course.split('-')[0] && (min <= parseInt(course.split('-')[1]) || max >= parseInt(course.split('-')[1])))
+        var separator = (course.indexOf('-') >= 0? '-' : ' ');
+        return (dept.toLowerCase() == course.split(separator)[0].toLowerCase() && (min <= parseInt(course.split(separator)[1]) || max >= parseInt(course.split(separator)[1])))
     });
 }
 
