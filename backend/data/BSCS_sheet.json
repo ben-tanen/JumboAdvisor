@@ -4,19 +4,19 @@
   "sect_reqs": 
     [{"name": "Concentration", 
          "req_list": [
-            {"name": "COMP 40",
+            {"name": "COMP-40",
              "description": "It will be fun",
              "valid_set": [["is", "COMP", 40]]
           },
-            {"name": "COMP 105 or 80",
+            {"name": "COMP-105 or 80",
              "description": "It will be fun",
              "valid_set": [["is", "COMP", 105], ["is", "COMP", 80]]
           },
-          {"name": "COMP 160",
+          {"name": "COMP-160",
              "description": "It will be fun",
              "valid_set": [["is", "COMP", 160]]
           },
-          {"name": "COMP 170",
+          {"name": "COMP-170",
              "description": "It will be fun",
              "valid_set": [["is", "COMP", 170]]
           },
@@ -54,50 +54,50 @@
                        ["is", "MATH", 161],
                        ["is", "MATH", 162]]
           },
-          {"name": "COMP 97",
+          {"name": "COMP-97",
              "description": "Senior Design Project",
              "valid_set": [["is", "COMP", 97]]
           },
-          {"name": "COMP 98",
+          {"name": "COMP-98",
              "description": "Senior Design Project",
              "valid_set": [["is", "COMP", 98]]
           }]
     },
     {"name": "Introductory", 
         "req_list": [
-          {"name": "ES 93",
+          {"name": "ES-93",
              "description": "It will be fun",
              "valid_set": [["is", "ES", 93]]
           },
-          {"name": "ES 2",
+          {"name": "ES-2",
              "description": "It will be fun",
              "valid_set": [["is", "ES", 2]]
           },
-          {"name": "MATH 32",
+          {"name": "MATH-32",
              "description": "It will be fun",
              "valid_set": [["is", "MATH", 32]]
           },
-          {"name": "MATH 36",
+          {"name": "MATH-36",
              "description": "It will be fun",
              "valid_set": [["is", "MATH", 36]]
           },
-          {"name": "MATH 42",
+          {"name": "MATH-42",
              "description": "It will be fun",
              "valid_set": [["is", "MATH", 42]]
           },
-          {"name": "MATH 61",
+          {"name": "MATH-61",
              "description": "It will be fun",
              "valid_set": [["is", "MATH", 61]]
           },
-          {"name": "PHY 11",
+          {"name": "PHY-11",
              "description": "It will be fun",
              "valid_set": [["is", "PHY", 11]]
           },
-          {"name": "CHEM 1 or 16",
+          {"name": "CHEM-1 or 16",
              "description": "It will be fun",
              "valid_set": [["is", "CHEM", 1], ["is", "CHEM", 16]]
           },
-          {"name": "PHY 12 or CHEM 2",
+          {"name": "PHY-12 or CHEM-2",
              "description": "It will be fun",
              "valid_set": [["is", "PHY", 12], ["is", "CHEM", 2]]
           },
@@ -141,12 +141,12 @@
     },
     {"name": "Breadth",
         "req_list": [
-          {"name": "PHIL 24 or EM 54",
+          {"name": "PHIL-24 or EM-54",
              "description": "It will be fun",
              "valid_set": [["is", "PHIL", 24], ["is", "EM", 54]]
           },
           {"name": "Breadth Elect",
-             "description": "Can include HASS, ENP, ELS, or EM courses, BME 50, CEE 1, CEE 32, ME 1, a MAX OF ONE EXP and a MAX OF ONE PE course",
+             "description": "Can include HASS, ENP, ELS, or EM courses, BME-50, CEE-1, CEE-32, ME-1, a MAX OF ONE EXP and a MAX OF ONE PE course",
              "valid_set": [["attr", "SoE-HASS-Humanities"], 
                            ["attr", "SoE-HASS-Social Sciences"],
                            ["attr", "SoE-HASS-Arts"],
@@ -161,7 +161,7 @@
                            ["is", "ME", 1]]
           },
           {"name": "Breadth Elect",
-             "description": "Can include HASS, ENP, ELS, or EM courses, BME 50, CEE 1, CEE 32, ME 1, a MAX OF ONE EXP and a MAX OF ONE PE course",
+             "description": "Can include HASS, ENP, ELS, or EM courses, BME-50, CEE-1, CEE-32, ME-1, a MAX OF ONE EXP and a MAX OF ONE PE course",
              "valid_set": [["attr", "SoE-HASS-Humanities"], 
                            ["attr", "SoE-HASS-Social Sciences"],
                            ["attr", "SoE-HASS-Arts"],
@@ -176,7 +176,7 @@
                            ["is", "ME", 1]]
           },
           {"name": "Breadth Elect",
-             "description": "Can include HASS, ENP, ELS, or EM courses, BME 50, CEE 1, CEE 32, ME 1, a MAX OF ONE EXP and a MAX OF ONE PE course",
+             "description": "Can include HASS, ENP, ELS, or EM courses, BME-50, CEE-1, CEE-32, ME-1, a MAX OF ONE EXP and a MAX OF ONE PE course",
              "valid_set": [["attr", "SoE-HASS-Humanities"], 
                            ["attr", "SoE-HASS-Social Sciences"],
                            ["attr", "SoE-HASS-Arts"],
@@ -193,24 +193,24 @@
     },
     {"name": "Foundation",
         "req_list": [
-          {"name": "COMP 11",
+          {"name": "COMP-11",
              "description": "Where squirrels go to die",
              "valid_set": [["is", "COMP", 11]]
           },
-          {"name": "COMP 15",
+          {"name": "COMP-15",
              "description": "Hash everything",
              "valid_set": [["is", "COMP", 15]]
           },
-          {"name": "ES 3",
+          {"name": "ES-3",
              "description": "Lab reports",
              "valid_set": [["is", "ES", 3]]
           },
-          {"name": "ES 4",
+          {"name": "ES-4",
              "description": "Switch to Arts and Sciences while you can",
              "valid_set": [["is", "ES", 4]]
           },
           {"name": "Prob & Stats",
-             "description": "MATH 161/162, ES 56, EE 104, BME 141, BIO 132, PHY 153",
+             "description": "MATH-161/162, ES-56, EE-104, BME-141, BIO-132, PHY-153",
              "valid_set": [["is", "MATH", 161], 
                            ["is", "MATH", 162], 
                            ["is", "ES", 56],
