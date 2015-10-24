@@ -11,7 +11,7 @@ function generate_new_degree_section(section) {
     html_str = "<div class = 'sect-reqs'><div class='sect-header'><h3>" + section['name'] + "</h3></div><ul>";
     for (j = 0; j < section['req_list'].length; j++) {
         req = section['req_list'][j]
-        html_str += "<li><div class='req " + (isSingleReq(req)?"req-single":"req-input") +"'>" + (isSingleReq(req)?"":"<span class='req_link'>") + req['name'] + (isSingleReq(req)?"":"</span><br /><div class='class-input'><input class='class-input-field' type='text'></div>") + "<div class='validation-check'></div><select class='semester-select'><option value='S17'>S17</option><option value='F16'>F16</option><option value='S16'>S16</option><option value='F15'>F15</option><option value='S15'>S15</option><option value='F14'>F14</option><option value='S14'>S14</option><option value='F13'>F13</option></select></div></li>";
+        html_str += "<li><div class='req " + (isSingleReq(req)?"req-single":"req-input") +"'>" + (isSingleReq(req)?"":"<span class='req_link'>") + req['name'] + (isSingleReq(req)?"":"</span><br /><div class='class-input'><input class='class-input-field' type='text'></div>") + "<div class='validation-check'></div><select class='semester-select'><option selected disabled hidden value=''></option><option value='S17'>S17</option><option value='F16'>F16</option><option value='S16'>S16</option><option value='F15'>F15</option><option value='S15'>S15</option><option value='F14'>F14</option><option value='S14'>S14</option><option value='F13'>F13</option></select></div></li>";
     }
     html_str += "</ul></div>"
     $('.wrapper').append(html_str)
@@ -52,6 +52,37 @@ function course_validated(input_field) {
 
 function course_failed(input_field) {
     input_field.closest('.req').find('.validation-check').css({'background-image': 'url("images/x.png")', 'background-size' : '20px'});
+}
+
+function clean_course_name(name) {
+    return name;
+}
+
+function get_schedule_data(wrapper) {
+    sem_mapping = ['F13', 'S14', 'F14', 'S15', 'F15', 'S16', 'F16', 'S17'];
+    schedule = new Array(8);
+    for (i = 0; i < schedule.length; i++) { schedule[i] = [ ] }
+
+    selects = $('.semester-select');
+    for (i = 0; i < selects.length; i++) {
+        if (selects[i].value != "") {
+            course_sem  = selects[i].value
+            index = sem_mapping.indexOf(course_sem);
+            schedule[index].push(clean_course_name($($(selects[i]).closest('.req').children()[2]).children()[0].value));
+        }
+    }
+
+    html_str = ''
+    for (i = 0; i < schedule.length; i++) {
+        if (schedule[i].length > 0) {
+            html_str += '<p><b>' + sem_mapping[i] + ':</b></p>';
+            for (j = 0; j < schedule[i].length; j++) {
+                html_str += '<p>' + schedule[i][j] + '</p>';
+            }
+            html_str += '</br>'
+        }
+    }
+    return html_str;
 }
 
 $(function() {
@@ -95,17 +126,15 @@ $(function() {
         }
     });
 
-    $(document).on('click', '.view-schedule', function() {
-        schedule_popup = new jBox('Modal',{
-                        attach: $('.req_link'),
-                        width: 400 ,
-                        height: 100,
-                        title: "Your Tufts Schedule",
-                        content: "Loading...",
-                        onOpen: function() {
-                            this.setContent('Your schedule...');
-                        }
-                    });
+    schedule_popup = new jBox('Modal',{
+        attach: $('#view-schedule'),
+        width: 300 ,
+        height: 400,
+        title: "Your Tufts Schedule",
+        content: "Loading...",
+        onOpen: function() {
+            this.setContent(get_schedule_data($('.wrapper')));
+        }
     });
 
     $(document).on('click', '.validation-check', function(e){
@@ -128,6 +157,7 @@ $(function() {
         if(e.keyCode == 13) {
             if(degree_list.indexOf($('#degree-search').val()) > -1) {
                 $('#logo').animate({'width': '100px'}, 500);
+                $('#view-schedule').css('display', 'inline');
                 $.ajax({
                     url: "http://130.64.193.20:3000/getDegreeSheet",
                     data: {
