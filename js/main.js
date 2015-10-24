@@ -11,7 +11,7 @@ function generate_new_degree_section(section) {
     html_str = "<div class = 'sect-reqs'><div class='sect-header'><h3>" + section['name'] + "</h3></div><ul>";
     for (j = 0; j < section['req_list'].length; j++) {
         req = section['req_list'][j]
-        html_str += "<li><div class='req " + (isSingleReq(req)?"req-single":"req-input") +"'>" + req['name'] + (isSingleReq(req)?"":"<br /><div class='class-input'><input class='class-input-field' type='text'></div>") + "<div class='validation-check'></div><select class='semester-select'><option value='S17'>S17</option><option value='F16'>F16</option><option value='S16'>S16</option><option value='F15'>F15</option></select></div></li>";
+        html_str += "<li><div class='req " + (isSingleReq(req)?"req-single":"req-input") +"'>" + (isSingleReq(req)?"":"<span id='req_link'>") + req['name'] + (isSingleReq(req)?"":"</span><br /><div class='class-input'><input class='class-input-field' type='text'></div>") + "<div class='validation-check'></div><select class='semester-select'><option value='S17'>S17</option><option value='F16'>F16</option><option value='S16'>S16</option><option value='F15'>F15</option><option value='S15'>S15</option><option value='F14'>F14</option><option value='S14'>S14</option><option value='F13'>F13</option></select></div></li>";
     }
     html_str += "</ul></div>"
     $('.wrapper').append(html_str)
@@ -125,6 +125,14 @@ $(function() {
                     for (i = 0; i < data['sect_reqs'].length; i++) {
                         generate_new_degree_section(data['sect_reqs'][i]);
                     }
+
+                    user_guide_popup = new jBox('Modal',{
+                        attach: $('#req_link'),
+                        width: 400 ,
+                        height: 200,
+                        title: "Description",
+                        content: "yo"
+                    });
 
                     $.ajax({
                         url: "http://130.64.193.20:3000/getCourseList",
