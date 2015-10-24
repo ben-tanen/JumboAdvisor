@@ -1,0 +1,234 @@
+[{
+	"name": "Computer Science (BSCS)",
+	"id": 1,
+	"sect_reqs": 
+		[{"name": "Concentration", 
+  		   "req_list": [
+  		   		{"name": "COMP 40",
+  		   		 "description": "It will be fun",
+  		   	 	 "valid_set": [["is", "COMP", 40]]
+  			 	},
+  			    {"name": "COMP 105 or 80",
+  			  	 "description": "It will be fun",
+  			  	 "valid_set": [["is", "COMP", 105], ["is", "COMP", 80]]
+  			 	},
+  			 	{"name": "COMP 160",
+  			  	 "description": "It will be fun",
+  			  	 "valid_set": [["is", "COMP", 160]]
+  			 	},
+  			 	{"name": "COMP 170",
+  			  	 "description": "It will be fun",
+  			  	 "valid_set": [["is", "COMP", 170]]
+  			 	},
+  			 	{"name": "COMP Elec (e)",
+  			  	 "description": "Computer Science numbered between 100 and 200",
+  			  	 "valid_set": [["range", "COMP", 100, 200]]
+  			 	},
+  			 	{"name": "COMP Elec (e)",
+  			  	 "description": "Computer Science numbered between 100 and 200",
+  			  	 "valid_set": [["range", "COMP", 100, 200]]
+  			 	},
+  			 	{"name": "COMP Elec (e)",
+  			  	 "description": "Computer Science numbered between 100 and 200",
+  			  	 "valid_set": [["range", "COMP", 100, 200]]
+  			 	},
+  			 	{"name": "COMP Elec (f, g)",
+  			  	 "description": "Computer Science numbered between 15 and 200",
+  			  	 "valid_set": [["range", "COMP", 15, 200]]
+  			 	},
+  			 	{"name": "COMP Elec (f, h)",
+  			  	 "description": "Computer Science numbered between 15 and 200",
+  			  	 "valid_set": [["range", "COMP", 15, 200],
+  			  	 			   ["is", "MATH", 51],
+  			  			   	   ["is", "MATH", 63],
+  			  			   	   ["is", "MATH", 70],
+  			  			       ["is", "MATH", 72],
+  			  			   	   ["is", "MATH", 87],
+  			  			       ["is", "MATH", 135],
+  			  			       ["is", "MATH", 136],
+  			  			       ["is", "MATH", 145],
+  			  			       ["is", "MATH", 146],
+  			  			       ["is", "MATH", 151],
+  			  			       ["is", "MATH", 152],
+  			  			       ["is", "MATH", 158],
+  			  			       ["is", "MATH", 161],
+  			  			       ["is", "MATH", 162]]
+  			 	},
+          {"name": "COMP 97",
+             "description": "Senior Design Project",
+             "valid_set": [["is", "COMP", 97]]
+          },
+          {"name": "COMP 98",
+             "description": "Senior Design Project",
+             "valid_set": [["is", "COMP", 98]]
+          }]
+  	},
+    {"name": "Introductory", 
+        "req_list": [
+          {"name": "ES 93",
+             "description": "It will be fun",
+             "valid_set": [["is", "ES", 93]]
+          },
+          {"name": "ES 2",
+             "description": "It will be fun",
+             "valid_set": [["is", "ES", 2]]
+          },
+          {"name": "MATH 32",
+             "description": "It will be fun",
+             "valid_set": [["is", "MATH", 32]]
+          },
+          {"name": "MATH 36",
+             "description": "It will be fun",
+             "valid_set": [["is", "MATH", 36]]
+          },
+          {"name": "MATH 42",
+             "description": "It will be fun",
+             "valid_set": [["is", "MATH", 42]]
+          },
+          {"name": "MATH 61",
+             "description": "It will be fun",
+             "valid_set": [["is", "MATH", 61]]
+          },
+          {"name": "PHY 11",
+             "description": "It will be fun",
+             "valid_set": [["is", "PHY", 11]]
+          },
+          {"name": "CHEM 1 or 16",
+             "description": "It will be fun",
+             "valid_set": [["is", "CHEM", 1], ["is", "CHEM", 16]]
+          },
+          {"name": "PHY 12 or CHEM 2",
+             "description": "It will be fun",
+             "valid_set": [["is", "PHY", 12], ["is", "CHEM", 2]]
+          },
+          {"name": "Nat Sci Elect (a)",
+             "description": "Courses with SoE-Nat Sci attribute",
+             "valid_set": [["attr", "SoE-Nat Sci"]]
+          }]
+    },
+    {"name": "Humanity/Art/Social Sci HASS",
+        "req_list": [
+          {"name": "ENG 1 or 3",
+             "description": "It will be fun",
+             "valid_set": [["is", "ENG", 1], ["is", "ENG", 3]]
+          },
+          {"name": "Humanity",
+             "description": "Courses with SoE-HASS-Humanities attribute, at least 2 HASS course credits must be in same dept",
+             "valid_set": [["attr", "SoE-HASS-Humanities"]]
+          },
+          {"name": "Social Science",
+             "description": "Courses with SoE-HASS-Social Sciences attribute, at least 2 HASS course credits must be in same dept",
+             "valid_set": [["attr", "SoE-HASS-Social Sciences"]]
+          },
+          {"name": "HASS Elect",
+             "description": "Courses with SoE-HASS attribute, at least 2 HASS course credits must be in same dept",
+             "valid_set": [["attr", "SoE-HASS-Humanities"], 
+                           ["attr", "SoE-HASS-Social Sciences"],
+                           ["attr", "SoE-HASS-Arts"]]
+          },
+          {"name": "HASS Elect",
+             "description": "Courses with SoE-HASS attribute, at least 2 HASS course credits must be in same dept",
+             "valid_set": [["attr", "SoE-HASS-Humanities"], 
+                           ["attr", "SoE-HASS-Social Sciences"],
+                           ["attr", "SoE-HASS-Arts"]]
+          },
+          {"name": "HASS Elect",
+             "description": "Courses with SoE-HASS attribute, at least 2 HASS course credits must be in same dept",
+             "valid_set": [["attr", "SoE-HASS-Humanities"], 
+                           ["attr", "SoE-HASS-Social Sciences"],
+                           ["attr", "SoE-HASS-Arts"]]
+          }]
+    },
+    {"name": "Breadth",
+        "req_list": [
+          {"name": "PHIL 24 or EM 54",
+             "description": "It will be fun",
+             "valid_set": [["is", "PHIL", 24], ["is", "EM", 54]]
+          },
+          {"name": "Breadth Elect",
+             "description": "Can include HASS, ENP, ELS, or EM courses, BME 50, CEE 1, CEE 32, ME 1, a MAX OF ONE EXP and a MAX OF ONE PE course",
+             "valid_set": [["attr", "SoE-HASS-Humanities"], 
+                           ["attr", "SoE-HASS-Social Sciences"],
+                           ["attr", "SoE-HASS-Arts"],
+                           ["range", "ENP", 0, 400],
+                           ["range", "ELS", 0, 400],
+                           ["range", "EM", 0, 400],
+                           ["range", "EXP", 0, 400],
+                           ["range", "PE", 0, 400],
+                           ["is", "BME", 50],
+                           ["is", "CEE", 1],
+                           ["is", "CEE", 32],
+                           ["is", "ME", 1]]
+          },
+          {"name": "Breadth Elect",
+             "description": "Can include HASS, ENP, ELS, or EM courses, BME 50, CEE 1, CEE 32, ME 1, a MAX OF ONE EXP and a MAX OF ONE PE course",
+             "valid_set": [["attr", "SoE-HASS-Humanities"], 
+                           ["attr", "SoE-HASS-Social Sciences"],
+                           ["attr", "SoE-HASS-Arts"],
+                           ["range", "ENP", 0, 400],
+                           ["range", "ELS", 0, 400],
+                           ["range", "EM", 0, 400],
+                           ["range", "EXP", 0, 400],
+                           ["range", "PE", 0, 400],
+                           ["is", "BME", 50],
+                           ["is", "CEE", 1],
+                           ["is", "CEE", 32],
+                           ["is", "ME", 1]]
+          },
+          {"name": "Breadth Elect",
+             "description": "Can include HASS, ENP, ELS, or EM courses, BME 50, CEE 1, CEE 32, ME 1, a MAX OF ONE EXP and a MAX OF ONE PE course",
+             "valid_set": [["attr", "SoE-HASS-Humanities"], 
+                           ["attr", "SoE-HASS-Social Sciences"],
+                           ["attr", "SoE-HASS-Arts"],
+                           ["range", "ENP", 0, 400],
+                           ["range", "ELS", 0, 400],
+                           ["range", "EM", 0, 400],
+                           ["range", "EXP", 0, 400],
+                           ["range", "PE", 0, 400],
+                           ["is", "BME", 50],
+                           ["is", "CEE", 1],
+                           ["is", "CEE", 32],
+                           ["is", "ME", 1]]
+          }]
+    },
+    {"name": "Foundation",
+        "req_list": [
+          {"name": "COMP 11",
+             "description": "Where squirrels go to die",
+             "valid_set": [["is", "COMP", 11]]
+          },
+          {"name": "COMP 15",
+             "description": "Hash everything",
+             "valid_set": [["is", "COMP", 15]]
+          },
+          {"name": "ES 3",
+             "description": "Lab reports",
+             "valid_set": [["is", "ES", 3]]
+          },
+          {"name": "ES 4",
+             "description": "Switch to Arts and Sciences while you can",
+             "valid_set": [["is", "ES", 4]]
+          },
+          {"name": "Prob & Stats",
+             "description": "MATH 161/162, ES 56, EE 104, BME 141, BIO 132, PHY 153",
+             "valid_set": [["is", "MATH", 161], 
+                           ["is", "MATH", 162], 
+                           ["is", "ES", 56],
+                           ["is", "EE", 104],
+                           ["is", "BME", 141],
+                           ["is", "BIO", 132],
+                           ["is", "PHY", 153]]
+          }]
+    },
+    {"name": "Free Electives",
+        "req_list": [
+        {"name": "Free Elective",
+            "description": "Any class",
+            "valid_set": [["any"]]
+        },
+        {"name": "Free Elective",
+            "description": "Any class",
+            "valid_set": [["any"]]
+        }]
+    }]
+}]
