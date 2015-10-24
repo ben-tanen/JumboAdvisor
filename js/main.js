@@ -1,3 +1,7 @@
+var degree_list  = null;
+var degree_sheet = null;
+var course_list  = null;
+
 function isSingleReq(req) {
     if (req['valid_set'].length == 1 && req['valid_set'][0][0] == 'is') return true;
     else return false;
@@ -25,6 +29,19 @@ function isCourseInRange(dept, min, max) {
     });
 }
 
+function attributeCheck(attribute) {
+    console.log('123');
+    return (function (course) {
+        var chkdept = course.split('-')[0];
+        var chknum = parseInt(course.split('-')[1]);
+        for (x=0;x < course_list.length; x++) {
+            if (course_list[x]["course_num"].split('-')[0] == chkdept && parseInt(course_list[x]["course_num"].split('-')[1]) == chknum) {
+                if (course_list[x]['attrs'].indexOf(attribute) >= 0) return true;
+                else return false;
+            }
+        }
+    });
+}
 
 
 function course_validated(input_field) {
@@ -36,10 +53,13 @@ function course_failed(input_field) {
 }
 
 $(function() {
+<<<<<<< HEAD
     var degree_list  = null;
     var degree_sheet = null;
     var course_list  = null;
 
+=======
+>>>>>>> 8effb5ceb9e16abcf8352cc7826fa6e87bbf0bde
     $.ajax({
         url: "http://130.64.193.20:3000/getDegreeList",
     }).done(function(data) {
@@ -67,6 +87,9 @@ $(function() {
                     course_validated($(this));
                     return;
                 } else if (valid_set[i][0] == 'any') {
+                    course_validated($(this));
+                    return;
+                } else if (valid_set[i][0] == 'attr' && attributeCheck(valid_set[i][1])(course_name)) {
                     course_validated($(this));
                     return;
                 }        
