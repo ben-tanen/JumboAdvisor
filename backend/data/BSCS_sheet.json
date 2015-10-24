@@ -1,59 +1,59 @@
 [{
-	"name": "Computer Science (BSCS)",
-	"id": 1,
-	"sect_reqs": 
-		[{"name": "Concentration", 
-  		   "req_list": [
-  		   		{"name": "COMP 40",
-  		   		 "description": "It will be fun",
-  		   	 	 "valid_set": [["is", "COMP", 40]]
-  			 	},
-  			    {"name": "COMP 105 or 80",
-  			  	 "description": "It will be fun",
-  			  	 "valid_set": [["is", "COMP", 105], ["is", "COMP", 80]]
-  			 	},
-  			 	{"name": "COMP 160",
-  			  	 "description": "It will be fun",
-  			  	 "valid_set": [["is", "COMP", 160]]
-  			 	},
-  			 	{"name": "COMP 170",
-  			  	 "description": "It will be fun",
-  			  	 "valid_set": [["is", "COMP", 170]]
-  			 	},
-  			 	{"name": "COMP Elec (e)",
-  			  	 "description": "Computer Science numbered between 100 and 200",
-  			  	 "valid_set": [["range", "COMP", 100, 200]]
-  			 	},
-  			 	{"name": "COMP Elec (e)",
-  			  	 "description": "Computer Science numbered between 100 and 200",
-  			  	 "valid_set": [["range", "COMP", 100, 200]]
-  			 	},
-  			 	{"name": "COMP Elec (e)",
-  			  	 "description": "Computer Science numbered between 100 and 200",
-  			  	 "valid_set": [["range", "COMP", 100, 200]]
-  			 	},
-  			 	{"name": "COMP Elec (f, g)",
-  			  	 "description": "Computer Science numbered between 15 and 200",
-  			  	 "valid_set": [["range", "COMP", 15, 200]]
-  			 	},
-  			 	{"name": "COMP Elec (f, h)",
-  			  	 "description": "Computer Science numbered between 15 and 200",
-  			  	 "valid_set": [["range", "COMP", 15, 200],
-  			  	 			   ["is", "MATH", 51],
-  			  			   	   ["is", "MATH", 63],
-  			  			   	   ["is", "MATH", 70],
-  			  			       ["is", "MATH", 72],
-  			  			   	   ["is", "MATH", 87],
-  			  			       ["is", "MATH", 135],
-  			  			       ["is", "MATH", 136],
-  			  			       ["is", "MATH", 145],
-  			  			       ["is", "MATH", 146],
-  			  			       ["is", "MATH", 151],
-  			  			       ["is", "MATH", 152],
-  			  			       ["is", "MATH", 158],
-  			  			       ["is", "MATH", 161],
-  			  			       ["is", "MATH", 162]]
-  			 	},
+  "name": "Computer Science (BSCS)",
+  "id": 1,
+  "sect_reqs": 
+    [{"name": "Concentration", 
+         "req_list": [
+            {"name": "COMP 40",
+             "description": "It will be fun",
+             "valid_set": [["is", "COMP", 40]]
+          },
+            {"name": "COMP 105 or 80",
+             "description": "It will be fun",
+             "valid_set": [["is", "COMP", 105], ["is", "COMP", 80]]
+          },
+          {"name": "COMP 160",
+             "description": "It will be fun",
+             "valid_set": [["is", "COMP", 160]]
+          },
+          {"name": "COMP 170",
+             "description": "It will be fun",
+             "valid_set": [["is", "COMP", 170]]
+          },
+          {"name": "COMP Elec (e)",
+             "description": "Computer Science numbered between 100 and 200",
+             "valid_set": [["range", "COMP", 100, 200]]
+          },
+          {"name": "COMP Elec (e)",
+             "description": "Computer Science numbered between 100 and 200",
+             "valid_set": [["range", "COMP", 100, 200]]
+          },
+          {"name": "COMP Elec (e)",
+             "description": "Computer Science numbered between 100 and 200",
+             "valid_set": [["range", "COMP", 100, 200]]
+          },
+          {"name": "COMP Elec (f, g)",
+             "description": "Computer Science numbered between 15 and 200",
+             "valid_set": [["range", "COMP", 15, 200]]
+          },
+          {"name": "COMP Elec (f, h)",
+             "description": "Computer Science numbered between 15 and 200",
+             "valid_set": [["range", "COMP", 15, 200],
+                     ["is", "MATH", 51],
+                       ["is", "MATH", 63],
+                       ["is", "MATH", 70],
+                       ["is", "MATH", 72],
+                       ["is", "MATH", 87],
+                       ["is", "MATH", 135],
+                       ["is", "MATH", 136],
+                       ["is", "MATH", 145],
+                       ["is", "MATH", 146],
+                       ["is", "MATH", 151],
+                       ["is", "MATH", 152],
+                       ["is", "MATH", 158],
+                       ["is", "MATH", 161],
+                       ["is", "MATH", 162]]
+          },
           {"name": "COMP 97",
              "description": "Senior Design Project",
              "valid_set": [["is", "COMP", 97]]
@@ -62,7 +62,7 @@
              "description": "Senior Design Project",
              "valid_set": [["is", "COMP", 98]]
           }]
-  	},
+    },
     {"name": "Introductory", 
         "req_list": [
           {"name": "ES 93",
@@ -141,7 +141,7 @@
     },
     {"name": "Breadth",
         "req_list": [
-          {"name": "Ethics & Social Context: PHIL 24 or EM 54",
+          {"name": "PHIL 24 or EM 54",
              "description": "It will be fun",
              "valid_set": [["is", "PHIL", 24], ["is", "EM", 54]]
           },
@@ -218,14 +218,17 @@
                            ["is", "BME", 141],
                            ["is", "BIO", 132],
                            ["is", "PHY", 153]]
-          },
-          {"name": "Free Elective",
-             "description": "Any class",
-             "valid_set": [["any"]]
-          },
-          {"name": "Free Elective",
-             "description": "Any class",
-             "valid_set": [["any"]]
           }]
+    },
+    {"name": "Free Electives",
+        "req_list": [
+        {"name": "Free Elective",
+            "description": "Any class",
+            "valid_set": [["any"]]
+        },
+        {"name": "Free Elective",
+            "description": "Any class",
+            "valid_set": [["any"]]
+        }]
     }]
 }]
