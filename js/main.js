@@ -114,6 +114,7 @@ $(function() {
     $('#degree-search').keyup(function(e){
         if(e.keyCode == 13) {
             if(degree_list.indexOf($('#degree-search').val()) > -1) {
+                $('#logo').animate({'width': '100px'}, 500);
                 $.ajax({
                     url: "http://130.64.193.20:3000/getDegreeSheet",
                     data: {
@@ -131,7 +132,7 @@ $(function() {
                         width: 400 ,
                         height: 100,
                         title: "Description",
-                        content: "yo",
+                        content: "Loading...",
                         onOpen: function() {
                             source = $(this.source)
                             req_num =  $(source).closest('.req').parent().index()
