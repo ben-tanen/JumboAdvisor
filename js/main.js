@@ -95,6 +95,19 @@ $(function() {
         }
     });
 
+    $(document).on('click', '.view-schedule', function() {
+        schedule_popup = new jBox('Modal',{
+                        attach: $('.req_link'),
+                        width: 400 ,
+                        height: 100,
+                        title: "Your Tufts Schedule",
+                        content: "Loading...",
+                        onOpen: function() {
+                            this.setContent('Your schedule...');
+                        }
+                    });
+    });
+
     $(document).on('click', '.validation-check', function(e){
         req_num =  $(this).closest('.req').parent().index()
         sect_num = $(this).closest('.sect-reqs').index()
