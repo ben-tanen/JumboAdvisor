@@ -55,7 +55,7 @@ function course_failed(input_field) {
 }
 
 function clean_course_name(name) {
-    return name;
+    return name.toUpperCase().trim().replace(' ', '-');
 }
 
 function get_schedule_data(wrapper) {
@@ -68,7 +68,13 @@ function get_schedule_data(wrapper) {
         if (selects[i].value != "") {
             course_sem  = selects[i].value
             index = sem_mapping.indexOf(course_sem);
-            schedule[index].push(clean_course_name($($(selects[i]).closest('.req').children()[2]).children()[0].value));
+            req = $(selects[i]).closest('.req')
+            if (req.hasClass('req-single')) {
+                schedule[index].push(clean_course_name(req[0].innerText))
+            } else {
+                schedule[index].push(clean_course_name($(req.children()[2]).children()[0].value));  
+            }
+            
         }
     }
 
