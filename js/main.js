@@ -11,7 +11,7 @@ function generate_new_degree_section(section) {
     html_str = "<div class = 'sect-reqs'><div class='sect-header'><h3>" + section['name'] + "</h3></div><ul>";
     for (j = 0; j < section['req_list'].length; j++) {
         req = section['req_list'][j]
-        html_str += "<li><div class='req " + (isSingleReq(req)?"req-single":"req-input") +"'>" + req['name'] + (isSingleReq(req)?"":"<br /><div class='class-input'><input class='class-input-field' type='text'></div>") + "<div class='validation-check'></div></div></li>";
+        html_str += "<li><div class='req " + (isSingleReq(req)?"req-single":"req-input") +"'>" + (isSingleReq(req)?"":"<span id='req_link'>") + req['name'] + (isSingleReq(req)?"":"</span><br /><div class='class-input'><input class='class-input-field' type='text'></div>") + "<div class='validation-check'></div><select class='semester-select'><option value='S17'>S17</option><option value='F16'>F16</option><option value='S16'>S16</option><option value='F15'>F15</option><option value='S15'>S15</option><option value='F14'>F14</option><option value='S14'>S14</option><option value='F13'>F13</option></select></div></li>";
     }
     html_str += "</ul></div>"
     $('.wrapper').append(html_str)
@@ -32,7 +32,6 @@ function isCourseInRange(dept, min, max) {
 }
 
 function attributeCheck(attribute) {
-    console.log('123');
     return (function (course) {
         var chkdept = course.split('-')[0];
         var chknum = parseInt(course.split('-')[1]);
@@ -48,6 +47,7 @@ function attributeCheck(attribute) {
 
 function course_validated(input_field) {
     input_field.closest('.req').find('.validation-check').css({'background-image': 'url("images/check.png")', 'background-size' : '20px'});
+    input_field.closest('.req').find('.validation-check').siblings('select').css('display', 'inline-block');
 }
 
 function course_failed(input_field) {
@@ -55,13 +55,6 @@ function course_failed(input_field) {
 }
 
 $(function() {
-<<<<<<< HEAD
-    var degree_list  = null;
-    var degree_sheet = null;
-    var course_list  = null;
-
-=======
->>>>>>> 8effb5ceb9e16abcf8352cc7826fa6e87bbf0bde
     $.ajax({
         url: "http://130.64.193.20:3000/getDegreeList",
     }).done(function(data) {
@@ -100,6 +93,22 @@ $(function() {
             course_failed($(this));
 
         }
+    });
+
+    $(document).on('click', '.validation-check', function(e){
+        req_num =  $(this).closest('.req').parent().index()
+        sect_num = $(this).closest('.sect-reqs').index()
+        valid_set = degree_sheet['sect_reqs'][sect_num]['req_list'][req_num]['valid_set']
+
+        if (valid_set.length == 1 && valid_set[0][0] == 'is') {
+            if ($(this).css('background-image') == 'none') {
+                $(this).css({'background-image': 'url("images/check.png")', 'background-size' : '20px'});
+                $(this).siblings('select').css('display', 'inline-block');
+            } else {
+                $(this).css({'background-image': 'none', 'background-size' : '20px'});
+                $(this).siblings('select').css('display', 'none');
+            }
+        }
     }); 
 
     $('#degree-search').keyup(function(e){
@@ -117,15 +126,18 @@ $(function() {
                         generate_new_degree_section(data['sect_reqs'][i]);
                     }
 
+                    user_guide_popup = new jBox('Modal',{
+                        attach: $('#req_link'),
+                        width: 400 ,
+                        height: 200,
+                        title: "Description",
+                        content: "yo"
+                    });
+
                     $.ajax({
                         url: "http://130.64.193.20:3000/getCourseList",
                     }).done(function(data) {
                         course_list = data;
-
-                        $( ".class-input-field" ).autocomplete({
-                            source: data,
-                            minLength: 1
-                        });
                     });
                 });
             } else {
