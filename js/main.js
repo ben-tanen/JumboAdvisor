@@ -36,8 +36,10 @@ function course_failed(input_field) {
 }
 
 $(function() {
-    var degree_list = [ ];
+    var degree_list  = null;
     var degree_sheet = null;
+    var course_list  = null;
+    
     $.ajax({
         url: "http://130.64.193.20:3000/getDegreeList",
     }).done(function(data) {
@@ -89,6 +91,16 @@ $(function() {
                     for (i = 0; i < data['sect_reqs'].length; i++) {
                         generate_new_degree_section(data['sect_reqs'][i]);
                     }
+
+                    $.ajax({
+                        url: "http://130.64.193.20:3000/getCourseList",
+                    }).done(function(data) {
+                        course_list = data;
+
+                        $( ".class-input-field" ).autocomplete({
+                            source: data
+                        });
+                    });
                 });
             } else {
                 alert('Please Enter a Valid Major');
