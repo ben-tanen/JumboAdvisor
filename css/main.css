@@ -123,11 +123,11 @@ input {
     margin-top: 6px;
 }
 
-#req_link {
+.req_link {
     cursor: pointer;
 }
 
-#req_link:hover {
+.req_link:hover {
     text-decoration: underline;
 }
 

@@ -9,7 +9,7 @@
              "valid_set": [["is", "COMP", 40]]
           },
             {"name": "COMP-105 or 80",
-             "description": "It will be fun",
+             "description": "Slightly not as bad as COMP-40",
              "valid_set": [["is", "COMP", 105], ["is", "COMP", 80]]
           },
           {"name": "COMP-160",
