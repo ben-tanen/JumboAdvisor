@@ -39,13 +39,12 @@ input {
 .sect-reqs {
     width: 300px;
     border-radius: 10px 10px 0 0;
-    border: 2px solid #3F3F3F;
+    border: 2px solid #92CCF6;
     overflow: hidden;
     margin: 10px;
     display: inline-block;
     vertical-align: top;
     border-radius: 2px;
-    text-align: center;
 }
 
 .sect-reqs li {
@@ -58,34 +57,45 @@ input {
 
 .sect-header {
     padding: 5px;
-    background-color: #3F3F3F;
+    background-color: #92CCF6;
     color: #FFFFFF;
 }
 
 .validation-check {
     width: 20px;
     height: 20px;
-    background-color: #7F7F7F;
+    background-color: #DCDCDC;
     display: inline-block;
     position: absolute;
-    right: 15px;
+    right: 20px;
     border-radius: 2px;
 }
 
-/*
-.class-input {
+.semester-select {
+    width: 60px;
+    height: 20px;
+    background-color: #DCDCDC;
     display: inline-block;
-    width: 80px;
-    height: 15px;
-    border: 1px solid gray;
+    position: absolute;
+    right: 45px;
+    top: 25px;
+    border-radius: 2px;
+    font-size: 15px;
+    display: none;
 }
-*/
+
+    
+
+.class-input-field {
+    border: 1px solid gray;
+    border-radius: 3px;
+}
 
 .req-single, .req-input {
     position: relative;
     width: 300px;
     padding: 5px 5px 5px 5px;
-    border-top: 2px solid #3F3F3F;
+    border-top: 1px solid #3F3F3F;
     font-size: 20px;
 }
 
