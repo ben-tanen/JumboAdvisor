@@ -28,11 +28,11 @@ function isCourseInRange(dept, min, max) {
 
 
 function course_validated(input_field) {
-    input_field.closest('.req').css({'background-color': 'green'});
+    input_field.closest('.req').find('.validation-check').css({'background-image': 'url("images/check.png")', 'background-size' : '20px'});
 }
 
 function course_failed(input_field) {
-    input_field.closest('.req').css({'background-color': 'red'});
+    input_field.closest('.req').find('.validation-check').css({'background-image': 'url("images/x.png")', 'background-size' : '20px'});
 }
 
 $(function() {
