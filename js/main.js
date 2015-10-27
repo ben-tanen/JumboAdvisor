@@ -93,7 +93,7 @@ function get_schedule_data(wrapper) {
 
 $(function() {
     $.ajax({
-        url: "http://130.64.193.20:3000/getDegreeList",
+        url: "http://jumbo-advisor.herokuapp.com/getDegreeList",
     }).done(function(data) {
         degree_list = data;
 
@@ -165,7 +165,7 @@ $(function() {
                 $('#logo').animate({'width': '100px'}, 500);
                 $('#view-schedule').css('display', 'inline');
                 $.ajax({
-                    url: "http://130.64.193.20:3000/getDegreeSheet",
+                    url: "http://jumbo-advisor.herokuapp.com/getDegreeSheet",
                     data: {
                         degree: $('#degree-search').val(),
                     }
@@ -191,7 +191,7 @@ $(function() {
                     });
 
                     $.ajax({
-                        url: "http://130.64.193.20:3000/getCourseList",
+                        url: "http://jumbo-advisor.herokuapp.com/getCourseList",
                     }).done(function(data) {
                         course_list = data;
                     });
