@@ -1,6 +1,8 @@
 ## JumboAdvisor
 ### Tufts Polyhack 2015
 
+By [Ben Tanen](https://github.com/ben-tanen), [Alex Golin](https://github.com/agolin95), [Nolan Martin](https://github.com/menlonoma), [Samantha Welch](https://github.com/swelch01), [Michael Seltzer](https://github.com/mseltzer94), [Jackson Crawford](https://github.com/jclaw)
+
 #### About
 
 JumboAdvisor is a project to improve upon the advisement report used by Tufts' Student Information System (SIS). One of the main downsides to the current advisement report is the inability to move class around and try out different combinations for one's major (or even try another major). JumboAdvisor attempts to offer more flexibility by allowing students to try any class anywhere on a degree sheet and receive validation on their input.
