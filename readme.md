@@ -1,7 +1,7 @@
 ## JumboAdvisor
 ### Tufts Polyhack 2015
 
-By [Ben Tanen](https://github.com/ben-tanen), [Alex Golin](https://github.com/agolin95), [Nolan Martin](https://github.com/menlonoma), [Samantha Welch](https://github.com/swelch01), [Michael Seltzer](https://github.com/mseltzer94), [Jackson Crawford](https://github.com/jclaw)
+By [Ben Tanen](https://github.com/ben-tanen), [Alex Golin](https://github.com/agolin95), [Nolan Martin](https://github.com/menlonoma), [Samantha Welch](https://github.com/swelch01), [Michael Seltzer](https://github.com/mseltzer94), [Jackson Clawson](https://github.com/jclaw)
 
 #### About
 
